@@ -1,0 +1,46 @@
+name: app
+description: "Мобильное приложение чемпионата «Профессионалы»: архитектура DOMAIN/PRESENTATION/DATA, библиотеки UIKit и сетевого слоя."
+# Запрет публикации в pub.dev: проект приватный.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Независимые библиотеки (отдельные проекты).
+  uikit:
+    path: ../packages/uikit
+  network:
+    path: ../packages/network
+
+  # Сторонние пакеты.
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.3.0
+  cached_network_image: ^3.4.1
+  image_picker: ^1.1.2
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.9.4
+  flutter_timezone: ^3.0.1
+  pdf: ^3.11.1
+  printing: ^5.13.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+# The following section is specific to Flutter.
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter.ttf
+  assets:
+    - assets/images/
+    - assets/docs/
